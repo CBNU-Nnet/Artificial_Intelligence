@@ -57,3 +57,11 @@
 2. 챗봇 -> RNN 
 
 해당 모델들을 본 뒤에 강화학습으로 넘어갈겁니다.
+
+## 추가적으로 혼자봐도 좋을만한 키노트 혹은 강의자료들
+- [딥러닝을 위한 기초 수학](https://www.slideshare.net/theeluwin/ss-69596991)
+- [텐서플로우 연습 코드 모음](https://github.com/golbin/TensorFlow-Tutorials)
+- [구글 딥러닝 강의](https://www.udacity.com/course/deep-learning--ud730)
+- [머신러닝 오픈소스 튜토리얼](https://scikit-learn.org/stable/tutorial/)
+- [옥스포드 머신러닝 수업자료](https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/)
+- [머신러닝 용어집](https://developers.google.com/machine-learning/glossary/?hl=ko)
