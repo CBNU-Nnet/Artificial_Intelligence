@@ -59,6 +59,8 @@
 해당 모델들을 본 뒤에 강화학습으로 넘어갈겁니다.
 
 ## 추가적으로 혼자봐도 좋을만한 키노트 혹은 강의자료들
+- [Andrew Ng 교수의 머신러닝강의(바이블과 같은 존재)](https://click.linksynergy.com/deeplink?id=nbJH6*TrzAA&mid=40328&murl=https%3A%2F%2Fwww.coursera.org%2Flearn%2Fmachine-learning)
+- [Andrew Ng 강의 예시코드 파이썬으로 바꾼거](https://github.com/kaleko/CourseraML)
 - [딥러닝을 위한 기초 수학](https://www.slideshare.net/theeluwin/ss-69596991)
 - [텐서플로우 연습 코드 모음](https://github.com/golbin/TensorFlow-Tutorials)
 - [구글 딥러닝 강의](https://www.udacity.com/course/deep-learning--ud730)
