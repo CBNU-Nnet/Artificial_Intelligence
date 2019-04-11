@@ -139,7 +139,7 @@ print(hello)       # Prints "hello"
 print(len(hello))  # 문자열의 길이 5가 표시됨
 hw = hello + ' ' + world  #  문자열 결합은 '+' 연산자로 가능
 print(hw)  # prints "hello world"   공백이 결합되어 표시됨
-hw12 = '%s %s %d' % (hello, world, 12)  # sprintf  스타일의 문자열 형식화 뒤에 인자가 사전형태로 들어간다고 생각하면 됨
+hw12 = '%s %s %d' % (hello, world, 12)  # sprintf  스타일의 문자열 형식화 뒤에 인자가 딕셔너리형태로 들어간다고 생각하면 됨
 print(hw12)  # prints "hello world 12"
 ```
 
@@ -163,7 +163,7 @@ print('  world '.strip())  # strip 메소드는 앞뒤에 따라오는 공백을
 
 파이썬은 몇가지 내장 컨테이너 타입을 포함하고 있다. 
 1. 리스트(lists)
-2. 사전(dictionaries)
+2. 딕셔너리(dictionaries)
 3. 집합(sets)
 4. 튜플(tuples)
 
@@ -251,19 +251,19 @@ print(even_squares)  # Prints "[0, 4, 16]"
 ```
 
 ### 사전형(Dictionaries)
-사전은 (키, 값) 쌍으로 저장한다. Java에서 Map 이나 Javascript에서 객체와 유사하다. 다음과 같이 사용할 수 있다.
+딕셔너리는 (키, 값) 쌍으로 저장한다. Java에서 Map 이나 Javascript에서 객체와 유사하다. 다음과 같이 사용할 수 있다.
 
 ```python
-d = {'cat': 'cute', 'dog': 'furry'}  # 사전은 {} 형태로 만들어지고, 키와 값의 쌍은 ':' 로 구분되며, 각 키들은 ','로 구분된다.
-print(d['cat'])       # 사전의 인덱스로 키를 넣으면 값을 반환한다. 그래서 키 cat의 값인 "cute" 가 반환된다.
-print('cat' in d)    #  in 연산자로 사전내에 키 값을 검색할 수 있으며, cat 키가 있는지를 검사했고, "True" 을 반환한다.
-d['fish'] = 'wet'    # 새로운 키와 값을 할당할 수도 있다. 이는 사전형태 내의 특수 메소드인 __setitem__를 호출한 결과와 같다.
+d = {'cat': 'cute', 'dog': 'furry'}  # 딕셔너리은 {} 형태로 만들어지고, 키와 값의 쌍은 ':' 로 구분되며, 각 키들은 ','로 구분된다.
+print(d['cat'])       # 딕셔너리의 인덱스로 키를 넣으면 값을 반환한다. 그래서 키 cat의 값인 "cute" 가 반환된다.
+print('cat' in d)    #  in 연산자로 딕셔너리내에 키 값을 검색할 수 있으며, cat 키가 있는지를 검사했고, "True" 을 반환한다.
+d['fish'] = 'wet'    # 새로운 키와 값을 할당할 수도 있다. 이는 딕셔너리형태 내의 특수 메소드인 __setitem__를 호출한 결과와 같다.
 print(d['fish'])      # 키 fish의 값 "wet" 를 반환한다.
 # print d['monkey']  # KeyError: 'monkey'  가 d의 키 값으로 존재하지 않기 때문에 keyerror 가 나온다.
 print(d.get('monkey', 'N/A'))  # 기본값과 함께 키를 찾을 수 있다. 없기 때문에 기본값 "N/A" 이 반환된다.
-print(d.get('fish', 'N/A'))   #  fish 키는 사전내에 존재하기 때문에 기본값이 아니라 값 "wet" 을 반환한다.
-del d['fish']        # 사전의 키값을 del 명령어로 삭제할 수 있다.
-print(d.get('fish', 'N/A')) # "fish가 더이상 사전의 키로 존재하지 않기 때문에 기본값  "N/A" 를 반환한다.
+print(d.get('fish', 'N/A'))   #  fish 키는 딕셔너리내에 존재하기 때문에 기본값이 아니라 값 "wet" 을 반환한다.
+del d['fish']        # 딕셔너리의 키값을 del 명령어로 삭제할 수 있다.
+print(d.get('fish', 'N/A')) # "fish가 더이상 딕셔너리의 키로 존재하지 않기 때문에 기본값  "N/A" 를 반환한다.
 ```
 
 딕셔너리에 대한 더 자세한 내용은 [다음의 문서](https://docs.python.org/3.5/library/stdtypes.html#dict)를 참조할 수 있다.
@@ -276,10 +276,10 @@ d = {'person': 2, 'cat': 4, 'spider': 8}
 for animal in d: 
     legs = d[animal]
     print('A %s has %d legs' % (animal, legs))
-# 반복문에서 사전의 키를 반복하고, legs에 사전의 값을 넣어 문자열 형식화를 사용해 다음이 표시됨 "A person has 2 legs", "A spider has 8 legs", "A cat has 4 legs"
+# 반복문에서 딕셔너리의 키를 반복하고, legs에 딕셔너리의 값을 넣어 문자열 형식화를 사용해 다음이 표시됨 "A person has 2 legs", "A spider has 8 legs", "A cat has 4 legs"
 ```
 
-사전의 키와 값을 한번에 접근하고 싶다면 `iteritems` 메소드를 사용한다.
+딕셔너리의 키와 값을 한번에 접근하고 싶다면 `iteritems` 메소드를 사용한다.
 
 ```python
 d = {'person': 2, 'cat': 4, 'spider': 8}
@@ -293,7 +293,7 @@ for animal, legs in d.iteritems():
 ```python
 nums = [0, 1, 2, 3, 4]
 even_num_to_square = {x: x ** 2 for x in nums if x % 2 == 0} 
-print(even_num_to_square)  # Prints "{0: 0, 2: 4, 4: 16}" 컴프리헨션의 표현(expresion)이 사전의 형태임
+print(even_num_to_square)  # Prints "{0: 0, 2: 4, 4: 16}" 컴프리헨션의 표현(expresion)이 딕셔너리의 형태임
 ```
 
 ### 집합(Sets)
@@ -334,14 +334,14 @@ print(nums)  # Prints "set([0, 1, 2, 3, 4, 5])"
 ```
 
 ### 튜플(Tuples)
-튜플은 변경할수 없는(immutable) 순서있는 리스트이다. 튜플은 리스트와 많은 점이 유사하지만, 튜플은 변경되지 않기 때문에 사전의 키로 사용할 수도 있다는 점과, 집합의 요소가 될 수 있다는 것이다. 리스트는 불가능하다.
+튜플은 변경할수 없는(immutable) 순서있는 리스트이다. 튜플은 리스트와 많은 점이 유사하지만, 튜플은 변경되지 않기 때문에 딕셔너리의 키로 사용할 수도 있다는 점과, 집합의 요소가 될 수 있다는 것이다. 리스트는 불가능하다.
 
 ```python
-d = {(x, x + 1): x for x in range(10)}  # 튜플은 () 로[사실은 ,로] 만들어지고, expression에서 사전의 키로 사용되었다.
+d = {(x, x + 1): x for x in range(10)}  # 튜플은 () 로[사실은 ,로] 만들어지고, expression에서 딕셔너리의 키로 사용되었다.
 t = (5, 6)       # 튜플은 ()로 사실은 , 로 만들어짐
 print(type(t))    # Prints "<type 'tuple'>"
-print(d[t])       #  사전의 키 5,6을 검색하니 값으로 "5"  가 나타남
-print(d[(1, 2)])  # 사전의 키로 1,2를 검색하니 값으로  "1" 이 나타남
+print(d[t])       #  딕셔너리의 키 5,6을 검색하니 값으로 "5"  가 나타남
+print(d[(1, 2)])  # 딕셔너리의 키로 1,2를 검색하니 값으로  "1" 이 나타남
 ```
 
 튜플에 대한 더 자세한 내용은 [다음 문서](https://docs.python.org/3.5/tutorial/datastructures.html#tuples-and-sequences)를 참조할 수 있다.
