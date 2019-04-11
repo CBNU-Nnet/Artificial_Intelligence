@@ -1,4 +1,4 @@
-<a name='numpy'></a>
+# Stanford CS231n - Numpy Tutorial
 
 ## Numpy
 
