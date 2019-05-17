@@ -25,7 +25,7 @@
 
 그 후에 Tensorflow를 설치하겠습니다.
 
-```{.bash}
+```{.sh}
 #설치 
 #CPU version (자신의 노트북에 외장 그래픽카드가 없을 시)
 pip install --ignore-installed --upgrade tensorflow 
@@ -39,7 +39,7 @@ pip install ipython
 
 그 후에 간단한 테스트를 진행합니다.
 
-```{.bash}
+```{.sh}
 ipython (타이핑 후 코드 입력)
 
 import tensorflow as tf
